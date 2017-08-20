@@ -14,6 +14,9 @@ Any chages done by you will not be saved and will remain available for that sess
 Following concepts I learned/used
 - Components communication through @Input, @Output params, Services and Observables.
 - used Routing, child routes and route parameter
+- working with Reactive Forms
+- use component lifecycle hooks
+- creating new pipes.
 - integrated D3 chart library
 - used bootstrap3 for app like responsive design.
 - used NoSQL data concepts to interact with large JSON data structure.
@@ -23,3 +26,4 @@ Devesh Bajpai
 devuone@gmail.com
 
 checkout my other work at https://github.com/devuone
+linkedin profile : https://www.linkedin.com/in/devesh-bajpai-182b9a24
