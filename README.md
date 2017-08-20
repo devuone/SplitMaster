@@ -12,11 +12,11 @@ Any chages done by you will not be saved and will remain available for that sess
 
 
 Following concepts I learned/used
--Components communication through @Input, @Output params, Services and Observables.
--used Routing, child routes and route parameter
--integrated D3 chart library
--used bootstrap3 for app like responsive design.
--used NoSQL data concepts to interact with large JSON data structure.
+- Components communication through @Input, @Output params, Services and Observables.
+- used Routing, child routes and route parameter
+- integrated D3 chart library
+- used bootstrap3 for app like responsive design.
+- used NoSQL data concepts to interact with large JSON data structure.
 
 Suggestions and queries are welcomed!
 Devesh Bajpai
