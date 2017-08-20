@@ -1,0 +1,12 @@
+<sb-header [headerData]="headerData"></sb-header>
+<div class="container-fluid col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-4 col-lg-offset-4 shadow">
+  
+      <div class="col-offset-1">
+<h3>Groups<button type="button" (click)="createGroup()" class="btn btn-success pull-right"><span class="glyphicon glyphicon-plus"></span> create</button></h3>
+<br>
+<div class="list-group">
+  <a *ngFor="let group of groupList|keys" routerLink="./{{group.key}}/expenses" class="list-group-item">{{group.value.name.value}}</a>
+</div>
+</div>
+</div>
+

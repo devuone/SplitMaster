@@ -1,0 +1,44 @@
+<sb-header [headerData]="headerData"></sb-header>
+<div class="container-fluid col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-4 col-lg-offset-4 shadow">
+<h3>Expense<span *ngIf="!(expenseId)"> Details</span>
+<button *ngIf="!(expenseId)" (click)="addExpense()" type="button" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-ok"></span> Done</button>
+<button *ngIf="expenseId" (click)="updateExpense()" type="button" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-ok"></span> Update</button>
+<button *ngIf="expenseId" (click)="deleteExpense()" type="button" class="btn btn-danger pull-right"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+</h3>
+<form [formGroup]="expenseForm">
+  <div class="form-group">
+    <label for="amount">Amount</label>
+    <input id="amount"  formControlName="amount" type="number" class="form-control" placeholder="Amount">
+  </div>
+  <div class="form-group">
+    <label >For</label>
+    <input id="paidFor" formControlName="paidFor" type="text" class="form-control" placeholder="For">
+  </div>
+  <div class="form-group">
+    <label >Paid By</label>
+   <select class="form-control" formControlName="paidBy">
+        <option *ngFor="let member of membersList|keys " value="{{member.key}}">{{member.value.name.value}}</option>
+        </select>
+  </div>
+  <div formArrayName="sharedBy">
+  <div *ngFor="let member of sharedBy.controls;let first = first; let i=index" [formGroupName]="i" class="row">
+    <div class="col-xs-8 col-sm-8 col-md-9 col-lg-9">
+      <label *ngIf="first">Shared By </label>
+      <div class="input-group">
+        <span class="input-group-addon">
+        <input type="checkbox" formControlName="isChosen" checked (click)="updateSharedAmount()">
+      </span>
+        <input type="text" class="form-control" formControlName="name">
+      </div>
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+      <label *ngIf="first">Amount</label>
+      <div class="input-group">
+        <input type="text" class="form-control" formControlName="amount">
+      </div>
+    </div>
+  </div>
+  </div>
+  <br>
+</form>
+</div>

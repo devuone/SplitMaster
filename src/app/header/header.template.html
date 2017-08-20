@@ -1,0 +1,18 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid ">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button *ngIf="showBackButton" (click)="goBack()" type="button" 
+      class="btn btn-default navbar-btn pull-left">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </button>
+      <a class="navbar-brand" href="#"><strong>{{navBarBrand}}</strong></a>
+      <button *ngIf="showEditButton" (click)="editGroup()" type="button"
+      class="btn btn-default navbar-btn pull-right hidden-md hidden-lg">
+        <span class="glyphicon glyphicon-pencil"></span> Edit</button>
+    </div>
+    <button *ngIf="showEditButton" (click)="editGroup()" type="button" 
+    class="btn btn-default navbar-btn pull-right hidden-xs hidden-sm">
+      <span class="glyphicon glyphicon-pencil"></span> Edit</button>
+  </div>
+</nav>

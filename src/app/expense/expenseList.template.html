@@ -1,0 +1,24 @@
+<sb-header [headerData]="headerData" (editClick)="editGroup()"></sb-header>
+<div class="container-fluid col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-4 col-lg-offset-4 shadow">
+  <h3>Expenses
+  <div class="btn-group pull-right">
+    <button (click)="addExpense()" type="button" class="btn btn-success "><span class="glyphicon glyphicon-plus"></span> Add</button>
+  </div>
+  </h3>
+  <br>
+  <h4 *ngIf="isExpenseListEmpty">No Expense exist for this group, start by adding some </h4>
+  <div class="btn-group-justified" *ngIf="!isExpenseListEmpty">
+    <div class="btn-group">
+      <button (click)="getBalanceTransactions()" type="button" class="btn btn-primary "><span class="glyphicon glyphicon-transfer"></span> Settle</button>
+    </div>
+    <div class="btn-group">
+      <button (click)="getStats()" type="button" class="btn btn-info "><span class="glyphicon glyphicon-signal"></span> Stats</button>
+    </div>
+  </div>
+  <br>
+  <div class="list-group">
+    <a *ngFor="let expense of expenseList|keys" routerLink="./updateExpense/{{expense.key}}" class="list-group-item">
+  {{expense.value.paidBy[0].user.name.value}} paid {{expense.value.amount}} for {{expense.value.for}}
+  </a>
+  </div>
+</div>

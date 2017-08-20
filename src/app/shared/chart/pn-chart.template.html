@@ -1,0 +1,11 @@
+<div *ngFor="let data of chartData">
+ <h4>{{data.label}}</h4> 
+<div class="progress">
+  <div class="progress-bar progress-bar-success" [style.width]="data.positivePerc + '%'">
+    <span>{{data.positiveValue}} {{data.positiveLabel}}</span>
+  </div>
+  <div class="progress-bar progress-bar-danger" [style.width]="data.negativePerc + '%'">
+    <span>{{data.negativeValue}} {{data.negativeLabel}}</span>
+  </div>
+</div>
+</div>
