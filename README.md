@@ -1,5 +1,5 @@
 # SplitMaster
-Check out Demo at : https://splitmaster-adeec.firebaseapp.com/groups
+Check out Demo at : https://splitmaster-adeec.firebaseapp.com
 
 I created this app as a demo of my  Angular2 (typescript) skills.
 
